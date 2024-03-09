@@ -1,2 +1,4 @@
 */node_modules
-test.js
+*/.env
+*/venv/
+*/__pycache__
