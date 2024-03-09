@@ -67,16 +67,15 @@ const predict = async (req, res) => {
       idle_mean: 56700000.0,
     };
 
-    axios
-      .post("http://localhost:8080/predict", data)
-      .then((response) => {
-        console.log("Response:", response.data);
-        res.status(200).json({Result : response.data});
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  } catch (err) {}
+    const response = await axios.post("http://localhost:8080/predict", data);
+    console.log("Response:", response.data);
+    res.status(200).json({ Result: response.data });
+  } catch (error) {
+    console.error("Error:", error);
+    res
+      .status(500)
+      .json({ error: "Internal Server Error", moreInfo: error.message });
+  }
 };
 
 module.exports = { testFastReq, sum, predict };
