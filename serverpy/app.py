@@ -40,6 +40,11 @@ class NewDataInput(BaseModel):
     idle_mean: float
 
 
+@app.get("/")
+def index():
+    return "<h1>Python Server</h1>"
+
+
 @app.post("/predict")
 async def predict():
     res_map = {0: "Benign", 1: "Infiltration"}
