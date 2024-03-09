@@ -7,6 +7,7 @@ app = FastAPI()
 
 
 class NewDataInput(BaseModel):
+    data: str
     protocol: int
     flow_duration: float
     tot_fwd_pkts: int
@@ -45,6 +46,8 @@ async def predict(new_data: NewDataInput):
     res_map = {0: "Benign", 1: "Infiltration"}
     model = CatBoostClassifier()
     model.load_model("gradient_boost_model.cbm")
+
+    new_data_dict = eval(new_data.data)
 
     new_data_df = pd.DataFrame([new_data.dict()])
 
