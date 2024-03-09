@@ -126,5 +126,5 @@ app.listen(8000, () => {
 });
 
 server.listen(6000, () => {
-  console.log("running on 5000");
+  console.log("Socket running on port 5000");
 });
