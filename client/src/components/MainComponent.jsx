@@ -1,16 +1,14 @@
 import Charts from "./Charts"
 import { socket } from "../socket"
 import { useState } from "react"
+import Logs from "./Logs"
 
 function MainComponent(){
-	const send = async () => {
-		await socket.emit("chat message","hello nigga")
-	}
 	return(
-		<>
+		<div className="flex w-screen h-svh items-center justify-center">
 			<Charts/>
-			<button onClick={send}>send</button>
-		</>
+			<Logs/>
+		</div>
 	)
 }
 
