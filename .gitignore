@@ -2,3 +2,7 @@
 */.env
 */venv/
 */__pycache__
+/serverpy/Include
+/serverpy/Scripts
+/serverpy/Lib
+/serverpy/pyvenv.cfg
