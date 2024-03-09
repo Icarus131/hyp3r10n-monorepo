@@ -1,0 +1,21 @@
+{
+  "name": "hyp3r10n-backend",
+  "version": "1.0.0",
+  "description": "backend for hyp3r10n, duh😔",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "nodemailer": "^6.9.12",
+    "openai": "^4.28.4",
+    "socket.io": "^4.7.4"
+  }
+}
