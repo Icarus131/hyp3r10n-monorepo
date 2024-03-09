@@ -1,11 +1,30 @@
 const mqtt = require("mqtt");
 const { exec } = require("child_process");
+const fs = require('fs');
+
 // const brokerUrl = "mqtt://172.19.0.2:1883"; // Replace with your MQTT broker address
 const brokerUrl = "mqtt://broker.hivemq.com";
-const DEVICE_TOPIC = "D1";
-const DEVICE_TOPIC_RECV = "D1_RECV";
+let DEVICE_TOPIC;
+let DEVICE_TOPIC_RECV;
+
 
 const client = mqtt.connect(brokerUrl);
+
+fs.readFile('config.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading JSON file:', err);
+      return;
+    }
+  
+    try {
+      const topics = JSON.parse(data);
+      DEVICE_TOPIC = topics.DEVICE_TOPIC;
+      DEVICE_TOPIC_RECV = topics.DEVICE_TOPIC_RECV;
+  
+    } catch (error) {
+      console.error('Error parsing JSON:', error);
+    }
+  });
 
 client.on("connect", () => {
   console.log("Connected Finally Bro !");
