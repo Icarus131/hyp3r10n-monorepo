@@ -42,17 +42,52 @@ class NewDataInput(BaseModel):
 
 
 @app.post("/predict")
-async def predict(new_data: NewDataInput):
+async def predict():
     res_map = {0: "Benign", 1: "Infiltration"}
     model = CatBoostClassifier()
     model.load_model("gradient_boost_model.cbm")
 
-    new_data_dict = eval(new_data.data)
+    new_data_dict = {
+        "data": "0,115307855,5,0,0,0,0,0,0,0,0.04336218,32400000,812396,115000000,812396,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0,1812348,56700000,Benign",
+        "protocol": 0,
+        "flow_duration": 115307855,
+        "tot_fwd_pkts": 5,
+        "tot_bwd_pkts": 0,
+        "totlen_fwd_pkts": 0.0,
+        "totlen_bwd_pkts": 0.0,
+        "fwd_pkt_len_mean": 0.0,
+        "fwd_pkt_len_std": 0.0,
+        "bwd_pkt_len_mean": 0.0,
+        "flow_byts_s": 0.04336218,
+        "flow_pkts_s": 32400000.0,
+        "flow_iat_std": 812396.0,
+        "flow_iat_min": 115000000.0,
+        "fwd_iat_tot": 812396.0,
+        "fwd_iat_min": 0.0,
+        "bwd_iat_tot": 0.0,
+        "bwd_iat_min": 0.0,
+        "fwd_psh_flags": 0,
+        "fwd_urg_flags": 0,
+        "bwd_pkts_s": 0.0,
+        "fin_flag_cnt": 0,
+        "rst_flag_cnt": 0,
+        "psh_flag_cnt": 0,
+        "ack_flag_cnt": 0,
+        "urg_flag_cnt": 0,
+        "down_up_ratio": -1.0,
+        "init_fwd_win_byts": -1,
+        "init_bwd_win_byts": 0,
+        "fwd_seg_size_min": 1812348,
+        "active_mean": 56700000.0,
+        "idle_mean": 56700000.0,
+    }
 
-    new_data_df = pd.DataFrame([new_data.dict()])
+    new_data_df = pd.DataFrame([new_data_dict])
 
     prediction = model.predict(new_data_df)
 
     result = {"prediction": res_map[prediction[0]]}
 
     return result
+
+# uvicorn app:app --host 0.0.0.0 --port 8080
