@@ -1,0 +1,1036 @@
+Principal Component 1: 24.47%
+Principal Component 2: 12.43%
+Principal Component 3: 11.25%
+Principal Component 4: 6.43%
+Principal Component 5: 5.24%
+Principal Component 6: 5.06%
+Principal Component 7: 4.75%
+Principal Component 8: 3.88%
+Principal Component 9: 3.14%
+Principal Component 10: 2.80%
+Principal Component 11: 2.27%
+Principal Component 12: 2.13%
+Principal Component 13: 1.80%
+Principal Component 14: 1.56%
+Principal Component 15: 1.51%
+Principal Component 16: 1.46%
+Principal Component 17: 1.40%
+Principal Component 18: 1.34%
+Principal Component 19: 1.20%
+Principal Component 20: 0.98%
+Principal Component 21: 0.89%
+Principal Component 22: 0.84%
+Principal Component 23: 0.60%
+Principal Component 24: 0.46%
+Principal Component 25: 0.40%
+Principal Component 26: 0.35%
+Principal Component 27: 0.33%
+Principal Component 28: 0.19%
+Principal Component 29: 0.16%
+Principal Component 30: 0.13%
+Principal Component 31: 0.13%
+Principal Component 32: 0.09%
+Principal Component 33: 0.08%
+Principal Component 34: 0.06%
+Principal Component 35: 0.04%
+Principal Component 36: 0.03%
+Principal Component 37: 0.03%
+Principal Component 38: 0.02%
+Principal Component 39: 0.02%
+Principal Component 40: 0.02%
+Principal Component 41: 0.01%
+Principal Component 42: 0.01%
+Principal Component 43: 0.01%
+Principal Component 44: 0.01%
+Principal Component 45: 0.01%
+Principal Component 46: 0.00%
+Principal Component 47: 0.00%
+Principal Component 48: 0.00%
+Principal Component 49: 0.00%
+Principal Component 50: 0.00%
+Principal Component 51: 0.00%
+Principal Component 52: 0.00%
+Principal Component 53: 0.00%
+Principal Component 54: 0.00%
+Principal Component 55: 0.00%
+Principal Component 56: 0.00%
+Principal Component 57: 0.00%
+Principal Component 58: 0.00%
+Principal Component 59: 0.00%
+Principal Component 60: 0.00%
+Principal Component 61: 0.00%
+Principal Component 62: 0.00%
+Principal Component 63: 0.00%
+Principal Component 64: 0.00%
+Principal Component 65: 0.00%
+Principal Component 66: 0.00%
+Principal Component 67: 0.00%
+Principal Component 68: 0.00%
+Principal Component 69: 0.00%
+Principal Component 70: 0.00%
+Principal Component 71: 0.00%
+Principal Component 72: 0.00%
+Principal Component 73: 0.00%
+Principal Component 74: 0.00%
+Principal Component 1 Top Attributes:
+pkt_len_max        0.215165
+pkt_len_std        0.213050
+bwd_pkt_len_max    0.211145
+bwd_pkt_len_std    0.206941
+pkt_len_var        0.198690
+rst_flag_cnt       0.195265
+ece_flag_cnt       0.195265
+bwd_iat_max        0.190322
+flow_iat_max       0.188653
+pkt_len_mean       0.187969
+Name: 0, dtype: float64
+
+Principal Component 2 Top Attributes:
+fwd_iat_mean     0.226901
+fwd_iat_max      0.218332
+idle_max         0.214128
+idle_mean        0.213556
+idle_min         0.209785
+flow_iat_max     0.209286
+flow_iat_mean    0.206816
+flow_iat_std     0.176484
+fwd_iat_min      0.175762
+fwd_iat_std      0.169212
+Name: 1, dtype: float64
+
+Principal Component 3 Top Attributes:
+fwd_header_len       0.344313
+subflow_fwd_pkts     0.330626
+tot_fwd_pkts         0.330626
+tot_bwd_pkts         0.322833
+subflow_bwd_pkts     0.322833
+fwd_act_data_pkts    0.285745
+totlen_fwd_pkts      0.285728
+subflow_fwd_byts     0.285728
+bwd_header_len       0.268276
+totlen_bwd_pkts      0.215797
+Name: 2, dtype: float64
+
+Principal Component 4 Top Attributes:
+fwd_seg_size_min    0.391208
+pkt_len_min         0.381770
+fwd_pkt_len_min     0.375131
+bwd_pkt_len_min     0.332569
+ack_flag_cnt        0.239020
+pkt_size_avg        0.176310
+psh_flag_cnt        0.168912
+fwd_psh_flags       0.161795
+syn_flag_cnt        0.161795
+fwd_seg_size_avg    0.160003
+Name: 3, dtype: float64
+
+Principal Component 5 Top Attributes:
+subflow_bwd_byts     0.412751
+totlen_bwd_pkts      0.412751
+bwd_header_len       0.338778
+totlen_fwd_pkts      0.312469
+subflow_fwd_byts     0.312469
+fwd_act_data_pkts    0.312276
+tot_bwd_pkts         0.217663
+subflow_bwd_pkts     0.217663
+subflow_fwd_pkts     0.200343
+tot_fwd_pkts         0.200343
+Name: 4, dtype: float64
+
+Principal Component 6 Top Attributes:
+flow_iat_min     0.416967
+fwd_iat_min      0.403559
+flow_iat_mean    0.355706
+fwd_iat_mean     0.303293
+active_max       0.241745
+active_mean      0.237070
+active_min       0.195958
+fwd_iat_std      0.175191
+active_std       0.170248
+flow_iat_std     0.161820
+Name: 5, dtype: float64
+
+Principal Component 7 Top Attributes:
+active_max         0.472349
+active_mean        0.469418
+active_min         0.394985
+active_std         0.322003
+flow_iat_min       0.153969
+bwd_pkt_len_min    0.140311
+fwd_iat_min        0.139159
+bwd_iat_max        0.132149
+flow_iat_mean      0.127016
+fwd_iat_std        0.120207
+Name: 6, dtype: float64
+
+Principal Component 8 Top Attributes:
+fwd_psh_flags       0.429059
+syn_flag_cnt        0.429059
+fwd_urg_flags       0.303580
+cwe_flag_count      0.303580
+fwd_seg_size_avg    0.272666
+fwd_pkt_len_mean    0.272666
+ack_flag_cnt        0.176656
+fwd_pkt_len_min     0.170531
+pkt_len_min         0.148349
+bwd_pkts_s          0.142677
+Name: 7, dtype: float64
+
+Principal Component 9 Top Attributes:
+fwd_urg_flags        0.463466
+cwe_flag_count       0.463466
+fwd_seg_size_avg     0.235906
+fwd_pkt_len_mean     0.235906
+init_bwd_win_byts    0.234583
+bwd_seg_size_avg     0.224912
+bwd_pkt_len_mean     0.224912
+fwd_pkt_len_std      0.199907
+fwd_pkt_len_max      0.192406
+bwd_iat_min          0.185683
+Name: 8, dtype: float64
+
+Principal Component 10 Top Attributes:
+fwd_urg_flags        0.348854
+cwe_flag_count       0.348854
+fwd_psh_flags        0.316960
+syn_flag_cnt         0.316960
+ack_flag_cnt         0.290836
+psh_flag_cnt         0.215598
+bwd_seg_size_avg     0.206840
+bwd_pkt_len_mean     0.206840
+init_fwd_win_byts    0.202336
+pkt_len_var          0.175558
+Name: 9, dtype: float64
+
+Principal Component 11 Top Attributes:
+bwd_iat_min        0.605551
+bwd_iat_mean       0.458232
+idle_std           0.245640
+fwd_pkts_s         0.220120
+bwd_pkt_len_min    0.175949
+ack_flag_cnt       0.168155
+bwd_iat_std        0.165238
+bwd_pkts_s         0.156276
+fwd_pkt_len_min    0.155184
+pkt_len_min        0.136052
+Name: 10, dtype: float64
+
+Principal Component 12 Top Attributes:
+bwd_pkts_s           0.610983
+fwd_pkts_s           0.498792
+bwd_iat_min          0.214671
+urg_flag_cnt         0.212501
+psh_flag_cnt         0.205454
+ack_flag_cnt         0.182221
+down_up_ratio        0.152655
+init_fwd_win_byts    0.149843
+fwd_seg_size_min     0.118252
+bwd_iat_mean         0.114284
+Name: 11, dtype: float64
+
+Principal Component 13 Top Attributes:
+urg_flag_cnt         0.600024
+ack_flag_cnt         0.324156
+idle_std             0.229517
+fwd_psh_flags        0.222832
+syn_flag_cnt         0.222832
+bwd_iat_min          0.207909
+init_fwd_win_byts    0.185859
+bwd_iat_tot          0.170617
+down_up_ratio        0.159358
+fwd_iat_tot          0.154850
+Name: 12, dtype: float64
+
+Principal Component 14 Top Attributes:
+fin_flag_cnt     0.776411
+down_up_ratio    0.406947
+idle_std         0.248459
+active_std       0.141255
+active_min       0.120897
+urg_flag_cnt     0.114944
+fwd_pkts_s       0.111705
+bwd_iat_min      0.103048
+fwd_psh_flags    0.101042
+syn_flag_cnt     0.101042
+Name: 13, dtype: float64
+
+Principal Component 15 Top Attributes:
+fin_flag_cnt         0.430712
+active_std           0.403811
+active_min           0.371383
+idle_std             0.290156
+fwd_iat_tot          0.224559
+flow_duration        0.215344
+idle_min             0.188923
+bwd_iat_tot          0.187901
+down_up_ratio        0.184645
+init_bwd_win_byts    0.156892
+Name: 14, dtype: float64
+
+Principal Component 16 Top Attributes:
+down_up_ratio        0.578013
+fin_flag_cnt         0.397656
+init_fwd_win_byts    0.321200
+urg_flag_cnt         0.267296
+bwd_iat_tot          0.232500
+init_bwd_win_byts    0.197438
+flow_duration        0.187840
+fwd_iat_tot          0.184957
+fwd_pkt_len_max      0.149779
+fwd_pkt_len_std      0.131802
+Name: 15, dtype: float64
+
+Principal Component 17 Top Attributes:
+active_std           0.412460
+down_up_ratio        0.402917
+idle_std             0.372437
+active_min           0.306421
+fwd_pkts_s           0.232938
+bwd_iat_tot          0.227216
+fwd_iat_tot          0.187724
+init_bwd_win_byts    0.182154
+flow_duration        0.175575
+fwd_pkt_len_min      0.174369
+Name: 16, dtype: float64
+
+Principal Component 18 Top Attributes:
+init_fwd_win_byts    0.445534
+fwd_pkts_s           0.416777
+idle_std             0.416673
+active_std           0.328730
+active_min           0.235904
+psh_flag_cnt         0.204710
+bwd_pkt_len_min      0.197564
+fwd_seg_size_min     0.184931
+ece_flag_cnt         0.174630
+rst_flag_cnt         0.174626
+Name: 17, dtype: float64
+
+Principal Component 19 Top Attributes:
+init_fwd_win_byts    0.625896
+idle_std             0.282269
+down_up_ratio        0.275418
+active_std           0.260403
+urg_flag_cnt         0.246333
+bwd_iat_tot          0.205177
+flow_duration        0.175872
+fwd_iat_tot          0.172578
+active_min           0.152934
+idle_min             0.150154
+Name: 18, dtype: float64
+
+Principal Component 20 Top Attributes:
+fwd_pkts_s           0.503370
+idle_std             0.420881
+bwd_pkts_s           0.285700
+fwd_pkt_len_min      0.232435
+fwd_seg_size_min     0.217853
+psh_flag_cnt         0.217817
+init_fwd_win_byts    0.211100
+active_std           0.194613
+bwd_pkt_len_min      0.188488
+pkt_len_min          0.188112
+Name: 19, dtype: float64
+
+Principal Component 21 Top Attributes:
+init_bwd_win_byts    0.507056
+bwd_pkts_s           0.367873
+urg_flag_cnt         0.362551
+bwd_pkt_len_min      0.283668
+fwd_seg_size_min     0.210168
+ack_flag_cnt         0.190062
+down_up_ratio        0.165787
+fwd_psh_flags        0.164750
+syn_flag_cnt         0.164750
+idle_std             0.159480
+Name: 20, dtype: float64
+
+Principal Component 22 Top Attributes:
+ece_flag_cnt         0.417858
+rst_flag_cnt         0.417845
+fwd_pkts_s           0.333711
+bwd_pkts_s           0.283601
+pkt_len_min          0.236772
+fwd_pkt_len_min      0.219701
+down_up_ratio        0.219160
+init_bwd_win_byts    0.189541
+fwd_pkt_len_std      0.186654
+fwd_pkt_len_max      0.157177
+Name: 21, dtype: float64
+
+Principal Component 23 Top Attributes:
+init_bwd_win_byts    0.541182
+init_fwd_win_byts    0.312507
+ece_flag_cnt         0.279809
+rst_flag_cnt         0.279791
+bwd_pkt_len_min      0.278741
+bwd_pkts_s           0.216767
+urg_flag_cnt         0.203545
+fwd_seg_size_min     0.189774
+down_up_ratio        0.150602
+fwd_pkt_len_std      0.150475
+Name: 22, dtype: float64
+
+Principal Component 24 Top Attributes:
+ack_flag_cnt         0.461888
+psh_flag_cnt         0.416893
+bwd_pkts_s           0.407040
+urg_flag_cnt         0.373813
+fwd_pkts_s           0.218627
+rst_flag_cnt         0.176113
+ece_flag_cnt         0.176111
+init_bwd_win_byts    0.143836
+bwd_pkt_len_max      0.136015
+bwd_pkt_len_std      0.131225
+Name: 23, dtype: float64
+
+Principal Component 25 Top Attributes:
+bwd_iat_std        0.450052
+fwd_iat_std        0.351625
+bwd_iat_max        0.302092
+bwd_pkt_len_std    0.276374
+bwd_pkt_len_max    0.233166
+bwd_iat_mean       0.211481
+bwd_pkt_len_min    0.209724
+pkt_len_max        0.194491
+fwd_iat_max        0.184157
+flow_iat_std       0.182027
+Name: 24, dtype: float64
+
+Principal Component 26 Top Attributes:
+bwd_iat_max          0.324663
+fwd_iat_std          0.295532
+bwd_pkt_len_min      0.290090
+bwd_pkt_len_std      0.285877
+fwd_seg_size_min     0.283779
+flow_iat_std         0.283350
+init_bwd_win_byts    0.221886
+rst_flag_cnt         0.220957
+ece_flag_cnt         0.220939
+bwd_pkt_len_max      0.219440
+Name: 25, dtype: float64
+
+Principal Component 27 Top Attributes:
+bwd_pkt_len_min     0.579004
+fwd_seg_size_min    0.504720
+bwd_pkt_len_max     0.219454
+ack_flag_cnt        0.196495
+pkt_len_max         0.186106
+pkt_len_mean        0.166544
+bwd_pkt_len_std     0.153689
+psh_flag_cnt        0.143387
+bwd_iat_max         0.142342
+flow_iat_std        0.126745
+Name: 26, dtype: float64
+
+Principal Component 28 Top Attributes:
+fwd_pkt_len_max     0.380162
+bwd_iat_std         0.367033
+flow_iat_std        0.288602
+pkt_len_min         0.260778
+fwd_seg_size_avg    0.225406
+fwd_pkt_len_mean    0.225406
+bwd_iat_min         0.220090
+bwd_iat_mean        0.212385
+bwd_pkt_len_max     0.198927
+bwd_iat_max         0.193339
+Name: 27, dtype: float64
+
+Principal Component 29 Top Attributes:
+fwd_pkt_len_max     0.447430
+bwd_iat_std         0.324574
+pkt_len_min         0.321261
+fwd_pkt_len_std     0.310594
+fwd_seg_size_avg    0.288747
+fwd_pkt_len_mean    0.288747
+pkt_len_max         0.164132
+bwd_iat_mean        0.161937
+fwd_header_len      0.148108
+bwd_iat_min         0.147045
+Name: 28, dtype: float64
+
+Principal Component 30 Top Attributes:
+fwd_header_len       0.705014
+totlen_fwd_pkts      0.258371
+subflow_fwd_byts     0.258371
+flow_iat_std         0.256327
+fwd_act_data_pkts    0.232775
+fwd_iat_std          0.174327
+subflow_fwd_pkts     0.172131
+tot_fwd_pkts         0.172131
+tot_bwd_pkts         0.148872
+subflow_bwd_pkts     0.148872
+Name: 29, dtype: float64
+
+Principal Component 31 Top Attributes:
+fwd_iat_std       0.492553
+flow_iat_std      0.479433
+flow_iat_min      0.328327
+fwd_header_len    0.293726
+fwd_iat_max       0.235984
+fwd_iat_min       0.223901
+bwd_iat_std       0.167272
+idle_max          0.143213
+idle_mean         0.139528
+idle_min          0.138422
+Name: 30, dtype: float64
+
+Principal Component 32 Top Attributes:
+fwd_iat_min      0.469214
+fwd_iat_max      0.439710
+flow_iat_mean    0.350130
+flow_iat_min     0.332996
+fwd_iat_mean     0.330552
+pkt_len_min      0.171018
+flow_duration    0.169096
+idle_max         0.166515
+idle_mean        0.161737
+idle_min         0.153572
+Name: 31, dtype: float64
+
+Principal Component 33 Top Attributes:
+fwd_pkt_len_min     0.644295
+pkt_len_min         0.602832
+fwd_pkt_len_max     0.309531
+fwd_iat_max         0.140947
+fwd_seg_size_avg    0.115961
+fwd_pkt_len_mean    0.115961
+fwd_iat_min         0.096489
+flow_iat_mean       0.085863
+flow_iat_std        0.083046
+fwd_pkt_len_std     0.076855
+Name: 32, dtype: float64
+
+Principal Component 34 Top Attributes:
+pkt_len_var        0.677912
+pkt_len_mean       0.331921
+bwd_pkt_len_max    0.331679
+pkt_size_avg       0.285791
+fwd_pkt_len_min    0.220456
+pkt_len_std        0.176883
+pkt_len_max        0.163278
+fwd_pkt_len_std    0.142898
+bwd_pkt_len_min    0.116243
+bwd_iat_mean       0.106813
+Name: 33, dtype: float64
+
+Principal Component 35 Top Attributes:
+psh_flag_cnt        0.538969
+ack_flag_cnt        0.403063
+bwd_iat_tot         0.365131
+fwd_seg_size_min    0.345172
+fwd_iat_tot         0.219537
+flow_duration       0.185271
+fwd_pkt_len_std     0.153979
+fwd_iat_std         0.142466
+bwd_iat_std         0.131186
+bwd_pkt_len_max     0.128848
+Name: 34, dtype: float64
+
+Principal Component 36 Top Attributes:
+pkt_len_var         0.396946
+bwd_seg_size_avg    0.376909
+bwd_pkt_len_mean    0.376909
+bwd_pkt_len_std     0.359897
+pkt_len_max         0.309791
+psh_flag_cnt        0.253312
+pkt_len_mean        0.210385
+pkt_size_avg        0.201409
+fwd_seg_size_min    0.188951
+ack_flag_cnt        0.157368
+Name: 35, dtype: float64
+
+Principal Component 37 Top Attributes:
+bwd_iat_tot         0.620333
+fwd_iat_tot         0.340292
+flow_duration       0.327534
+psh_flag_cnt        0.320930
+fwd_seg_size_min    0.285749
+ack_flag_cnt        0.221401
+bwd_iat_std         0.206881
+fwd_iat_std         0.115026
+fwd_iat_mean        0.109053
+bwd_iat_min         0.087047
+Name: 36, dtype: float64
+
+Principal Component 38 Top Attributes:
+fwd_pkt_len_std     0.637419
+fwd_pkt_len_max     0.483788
+pkt_len_std         0.212537
+fwd_pkt_len_min     0.198353
+bwd_iat_mean        0.155954
+pkt_size_avg        0.152038
+fwd_pkt_len_mean    0.138403
+fwd_seg_size_avg    0.138403
+pkt_len_var         0.136610
+flow_iat_std        0.132679
+Name: 37, dtype: float64
+
+Principal Component 39 Top Attributes:
+bwd_iat_mean       0.506313
+bwd_iat_min        0.357530
+flow_iat_std       0.289401
+idle_mean          0.238496
+bwd_iat_max        0.231892
+idle_min           0.230580
+fwd_pkt_len_std    0.229437
+idle_max           0.206324
+flow_iat_max       0.197751
+fwd_iat_mean       0.178589
+Name: 38, dtype: float64
+
+Principal Component 40 Top Attributes:
+bwd_pkt_len_std     0.521770
+pkt_len_max         0.432362
+flow_iat_max        0.272330
+bwd_seg_size_avg    0.232029
+bwd_pkt_len_mean    0.232029
+pkt_size_avg        0.221352
+fwd_iat_max         0.216416
+pkt_len_mean        0.196499
+fwd_iat_std         0.180621
+bwd_iat_mean        0.163747
+Name: 39, dtype: float64
+
+Principal Component 41 Top Attributes:
+flow_iat_max       0.399811
+bwd_pkt_len_std    0.292677
+pkt_len_max        0.270771
+bwd_iat_max        0.258468
+bwd_iat_min        0.256315
+bwd_iat_std        0.256098
+fwd_iat_max        0.248059
+bwd_iat_mean       0.229258
+idle_min           0.224956
+active_max         0.207320
+Name: 40, dtype: float64
+
+Principal Component 42 Top Attributes:
+active_max          0.766354
+active_mean         0.437723
+active_std          0.333265
+active_min          0.119683
+bwd_iat_mean        0.119348
+flow_iat_max        0.104040
+bwd_iat_min         0.099036
+bwd_seg_size_avg    0.077750
+bwd_pkt_len_mean    0.077750
+fwd_iat_max         0.077663
+Name: 41, dtype: float64
+
+Principal Component 43 Top Attributes:
+pkt_len_std         0.582606
+bwd_pkt_len_max     0.576822
+pkt_len_max         0.317051
+pkt_len_var         0.275001
+fwd_pkt_len_std     0.251625
+fwd_pkt_len_max     0.192793
+bwd_pkt_len_std     0.103586
+active_max          0.073564
+bwd_pkt_len_mean    0.063690
+bwd_seg_size_avg    0.063690
+Name: 42, dtype: float64
+
+Principal Component 44 Top Attributes:
+bwd_iat_max     0.581531
+fwd_iat_mean    0.469595
+fwd_iat_max     0.358677
+bwd_iat_std     0.236214
+bwd_iat_tot     0.213080
+fwd_iat_min     0.212793
+flow_iat_max    0.166822
+flow_iat_min    0.143522
+pkt_size_avg    0.129060
+fwd_iat_std     0.125684
+Name: 43, dtype: float64
+
+Principal Component 45 Top Attributes:
+subflow_bwd_byts     0.384129
+totlen_bwd_pkts      0.384110
+bwd_header_len       0.360506
+subflow_fwd_pkts     0.356345
+tot_fwd_pkts         0.356345
+fwd_header_len       0.288650
+tot_bwd_pkts         0.254634
+subflow_bwd_pkts     0.254634
+fwd_act_data_pkts    0.236118
+flow_iat_max         0.080741
+Name: 44, dtype: float64
+
+Principal Component 46 Top Attributes:
+totlen_fwd_pkts      0.393076
+subflow_fwd_byts     0.393076
+subflow_fwd_pkts     0.379925
+tot_fwd_pkts         0.379925
+fwd_header_len       0.370594
+subflow_bwd_pkts     0.219864
+tot_bwd_pkts         0.219864
+subflow_bwd_byts     0.206972
+totlen_bwd_pkts      0.206952
+fwd_act_data_pkts    0.140504
+Name: 45, dtype: float64
+
+Principal Component 47 Top Attributes:
+flow_iat_max     0.568405
+flow_iat_mean    0.490207
+fwd_iat_max      0.359829
+fwd_iat_mean     0.214962
+fwd_iat_std      0.194978
+flow_duration    0.183239
+flow_iat_std     0.177794
+fwd_iat_tot      0.154694
+bwd_iat_max      0.152519
+flow_iat_min     0.146148
+Name: 46, dtype: float64
+
+Principal Component 48 Top Attributes:
+fwd_iat_mean    0.369119
+fwd_iat_min     0.350549
+idle_max        0.316251
+bwd_iat_max     0.269233
+bwd_iat_std     0.252522
+bwd_iat_min     0.229768
+flow_iat_min    0.225456
+fwd_iat_std     0.211222
+idle_min        0.197897
+bwd_iat_mean    0.195449
+Name: 47, dtype: float64
+
+Principal Component 49 Top Attributes:
+pkt_len_std          0.611712
+pkt_len_max          0.430315
+bwd_pkt_len_max      0.368298
+bwd_pkt_len_std      0.338821
+fwd_act_data_pkts    0.156216
+idle_max             0.138937
+fwd_iat_mean         0.135724
+fwd_iat_min          0.131893
+pkt_size_avg         0.113756
+idle_min             0.108645
+Name: 48, dtype: float64
+
+Principal Component 50 Top Attributes:
+fwd_act_data_pkts    0.752715
+totlen_fwd_pkts      0.221913
+subflow_fwd_byts     0.221913
+subflow_bwd_byts     0.215375
+totlen_bwd_pkts      0.215343
+bwd_header_len       0.189240
+pkt_size_avg         0.166407
+tot_bwd_pkts         0.137792
+subflow_bwd_pkts     0.137792
+flow_duration        0.123192
+Name: 49, dtype: float64
+
+Principal Component 51 Top Attributes:
+idle_max             0.472652
+pkt_len_mean         0.427586
+pkt_size_avg         0.409671
+idle_min             0.342767
+fwd_iat_min          0.271307
+fwd_iat_mean         0.239038
+fwd_act_data_pkts    0.194690
+fwd_iat_std          0.172388
+bwd_iat_mean         0.108016
+bwd_iat_min          0.106468
+Name: 50, dtype: float64
+
+Principal Component 52 Top Attributes:
+idle_max           0.518141
+pkt_len_mean       0.513133
+pkt_size_avg       0.487904
+idle_min           0.386975
+idle_std           0.102954
+fwd_iat_min        0.082704
+bwd_pkt_len_std    0.080142
+pkt_len_std        0.070832
+fwd_iat_max        0.066787
+fwd_iat_std        0.066442
+Name: 51, dtype: float64
+
+Principal Component 53 Top Attributes:
+flow_duration        0.497947
+fwd_iat_tot          0.496003
+flow_iat_min         0.425601
+flow_iat_mean        0.327913
+flow_iat_std         0.258533
+fwd_iat_std          0.158120
+fwd_iat_min          0.158098
+pkt_size_avg         0.146060
+pkt_len_mean         0.144222
+fwd_act_data_pkts    0.113520
+Name: 52, dtype: float64
+
+Principal Component 54 Top Attributes:
+bwd_header_len       0.780570
+tot_bwd_pkts         0.405500
+subflow_bwd_pkts     0.405500
+fwd_header_len       0.121307
+subflow_fwd_pkts     0.116761
+tot_fwd_pkts         0.116761
+fwd_act_data_pkts    0.094748
+pkt_len_std          0.060329
+pkt_len_max          0.041177
+active_min           0.030446
+Name: 53, dtype: float64
+
+Principal Component 55 Top Attributes:
+idle_mean         0.709060
+idle_min          0.469135
+active_mean       0.309547
+active_min        0.296781
+idle_max          0.245584
+active_std        0.160112
+active_max        0.050611
+bwd_header_len    0.035346
+idle_std          0.027911
+flow_duration     0.023486
+Name: 54, dtype: float64
+
+Principal Component 56 Top Attributes:
+active_mean      0.586466
+active_min       0.573174
+idle_mean        0.369857
+active_std       0.314966
+idle_min         0.235764
+idle_max         0.137941
+active_max       0.112094
+fwd_iat_tot      0.025053
+flow_duration    0.024291
+fwd_iat_max      0.023601
+Name: 55, dtype: float64
+
+Principal Component 57 Top Attributes:
+flow_duration    0.421560
+fwd_iat_tot      0.406597
+flow_iat_min     0.392135
+flow_iat_mean    0.342219
+flow_iat_max     0.338694
+fwd_iat_max      0.300112
+fwd_iat_min      0.227459
+flow_iat_std     0.217330
+fwd_iat_mean     0.182393
+fwd_iat_std      0.175345
+Name: 56, dtype: float64
+
+Principal Component 58 Top Attributes:
+rst_flag_cnt     0.707118
+ece_flag_cnt     0.707091
+flow_iat_mean    0.001389
+flow_iat_min     0.001359
+idle_max         0.000680
+flow_iat_std     0.000570
+idle_min         0.000381
+fwd_iat_tot      0.000336
+pkt_size_avg     0.000301
+bwd_iat_mean     0.000297
+Name: 57, dtype: float64
+
+Principal Component 59 Top Attributes:
+totlen_bwd_pkts     0.707114
+subflow_bwd_byts    0.707100
+flow_iat_max        0.000141
+idle_max            0.000122
+bwd_iat_max         0.000066
+flow_iat_min        0.000058
+flow_iat_std        0.000047
+idle_mean           0.000043
+bwd_iat_std         0.000041
+fwd_iat_min         0.000039
+Name: 58, dtype: float64
+
+Principal Component 60 Top Attributes:
+subflow_bwd_pkts    0.707107
+tot_bwd_pkts        0.707107
+cwe_flag_count      0.000379
+fwd_urg_flags       0.000379
+fwd_seg_size_avg    0.000011
+fwd_pkt_len_mean    0.000011
+syn_flag_cnt        0.000005
+fwd_psh_flags       0.000005
+bwd_pkt_len_mean    0.000005
+bwd_seg_size_avg    0.000005
+Name: 59, dtype: float64
+
+Principal Component 61 Top Attributes:
+cwe_flag_count      0.707106
+fwd_urg_flags       0.707106
+fwd_pkt_len_mean    0.000665
+fwd_seg_size_avg    0.000665
+subflow_bwd_pkts    0.000379
+tot_bwd_pkts        0.000379
+tot_fwd_pkts        0.000277
+subflow_fwd_pkts    0.000277
+subflow_fwd_byts    0.000152
+totlen_fwd_pkts     0.000152
+Name: 60, dtype: float64
+
+Principal Component 62 Top Attributes:
+tot_fwd_pkts        0.707107
+subflow_fwd_pkts    0.707107
+cwe_flag_count      0.000277
+fwd_urg_flags       0.000277
+fwd_psh_flags       0.000006
+syn_flag_cnt        0.000006
+totlen_fwd_pkts     0.000006
+subflow_fwd_byts    0.000006
+fwd_pkt_len_mean    0.000005
+fwd_seg_size_avg    0.000005
+Name: 61, dtype: float64
+
+Principal Component 63 Top Attributes:
+fwd_pkt_len_mean    0.707106
+fwd_seg_size_avg    0.707106
+cwe_flag_count      0.000665
+fwd_urg_flags       0.000665
+bwd_seg_size_avg    0.000095
+bwd_pkt_len_mean    0.000095
+syn_flag_cnt        0.000092
+fwd_psh_flags       0.000092
+tot_bwd_pkts        0.000010
+subflow_bwd_pkts    0.000010
+Name: 62, dtype: float64
+
+Principal Component 64 Top Attributes:
+syn_flag_cnt        0.707107
+fwd_psh_flags       0.707107
+bwd_pkt_len_mean    0.000600
+bwd_seg_size_avg    0.000600
+fwd_seg_size_avg    0.000092
+fwd_pkt_len_mean    0.000092
+bwd_urg_flags       0.000039
+bwd_psh_flags       0.000034
+fwd_byts_b_avg      0.000028
+subflow_fwd_byts    0.000019
+Name: 63, dtype: float64
+
+Principal Component 65 Top Attributes:
+bwd_pkt_len_mean    0.707107
+bwd_seg_size_avg    0.707107
+syn_flag_cnt        0.000600
+fwd_psh_flags       0.000600
+fwd_seg_size_avg    0.000095
+fwd_pkt_len_mean    0.000095
+fwd_byts_b_avg      0.000031
+bwd_urg_flags       0.000026
+bwd_pkts_b_avg      0.000024
+bwd_psh_flags       0.000020
+Name: 64, dtype: float64
+
+Principal Component 66 Top Attributes:
+subflow_fwd_byts    0.707107
+totlen_fwd_pkts     0.707107
+cwe_flag_count      0.000152
+fwd_urg_flags       0.000152
+bwd_urg_flags       0.000024
+syn_flag_cnt        0.000019
+fwd_psh_flags       0.000019
+bwd_psh_flags       0.000015
+tot_fwd_pkts        0.000006
+subflow_fwd_pkts    0.000006
+Name: 65, dtype: float64
+
+Principal Component 67 Top Attributes:
+bwd_psh_flags       0.909221
+bwd_urg_flags       0.409716
+fwd_pkts_b_avg      0.055382
+fwd_byts_b_avg      0.039380
+bwd_blk_rate_avg    0.016431
+fwd_blk_rate_avg    0.015819
+bwd_pkts_b_avg      0.013454
+bwd_byts_b_avg      0.011426
+fwd_psh_flags       0.000033
+syn_flag_cnt        0.000033
+Name: 66, dtype: float64
+
+Principal Component 68 Top Attributes:
+fwd_byts_b_avg      0.966211
+bwd_blk_rate_avg    0.164643
+bwd_pkts_b_avg      0.124953
+bwd_byts_b_avg      0.108573
+fwd_blk_rate_avg    0.085745
+fwd_pkts_b_avg      0.047850
+bwd_psh_flags       0.043318
+bwd_urg_flags       0.020252
+bwd_pkt_len_mean    0.000021
+bwd_seg_size_avg    0.000021
+Name: 67, dtype: float64
+
+Principal Component 69 Top Attributes:
+fwd_pkts_b_avg      0.872061
+bwd_blk_rate_avg    0.424479
+fwd_byts_b_avg      0.140542
+bwd_byts_b_avg      0.134420
+fwd_blk_rate_avg    0.132317
+bwd_psh_flags       0.048732
+bwd_pkts_b_avg      0.034398
+bwd_urg_flags       0.020978
+bwd_seg_size_avg    0.000013
+bwd_pkt_len_mean    0.000013
+Name: 68, dtype: float64
+
+Principal Component 70 Top Attributes:
+bwd_pkts_b_avg      0.725263
+bwd_blk_rate_avg    0.524772
+fwd_blk_rate_avg    0.356214
+bwd_byts_b_avg      0.168941
+fwd_pkts_b_avg      0.166554
+fwd_byts_b_avg      0.124206
+bwd_psh_flags       0.002882
+bwd_urg_flags       0.001660
+bwd_seg_size_avg    0.000012
+bwd_pkt_len_mean    0.000012
+Name: 69, dtype: float64
+
+Principal Component 71 Top Attributes:
+fwd_blk_rate_avg    0.714190
+bwd_blk_rate_avg    0.509372
+fwd_pkts_b_avg      0.410340
+bwd_byts_b_avg      0.185284
+fwd_byts_b_avg      0.138324
+bwd_pkts_b_avg      0.092583
+bwd_psh_flags       0.007104
+bwd_urg_flags       0.002868
+cwe_flag_count      0.000004
+fwd_urg_flags       0.000004
+Name: 70, dtype: float64
+
+Principal Component 72 Top Attributes:
+bwd_pkts_b_avg      0.665709
+bwd_blk_rate_avg    0.502076
+fwd_blk_rate_avg    0.435861
+bwd_byts_b_avg      0.294968
+fwd_pkts_b_avg      0.145133
+fwd_byts_b_avg      0.080336
+bwd_psh_flags       0.014626
+bwd_urg_flags       0.006220
+bwd_seg_size_avg    0.000016
+bwd_pkt_len_mean    0.000016
+Name: 71, dtype: float64
+
+Principal Component 73 Top Attributes:
+bwd_byts_b_avg      0.905613
+fwd_blk_rate_avg    0.384655
+fwd_pkts_b_avg      0.130264
+bwd_blk_rate_avg    0.074261
+bwd_pkts_b_avg      0.072634
+fwd_byts_b_avg      0.064179
+bwd_psh_flags       0.004820
+bwd_urg_flags       0.002083
+cwe_flag_count      0.000002
+fwd_urg_flags       0.000002
+Name: 72, dtype: float64
+
+Principal Component 74 Top Attributes:
+bwd_urg_flags       0.911717
+bwd_psh_flags       0.410816
+fwd_pkts_b_avg      0.000878
+fwd_byts_b_avg      0.000791
+bwd_pkts_b_avg      0.000384
+bwd_blk_rate_avg    0.000112
+fwd_blk_rate_avg    0.000095
+bwd_byts_b_avg      0.000037
+bwd_seg_size_avg    0.000022
+bwd_pkt_len_mean    0.000022
+Name: 73, dtype: float64
+
