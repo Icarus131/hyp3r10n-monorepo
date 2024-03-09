@@ -1,6 +1,8 @@
+import LandingPageComponent from "./components/LandingPageComponent"
+
 function App() {
 	return(
-		<h1 className="font-bold">Hello world</h1>
+		<LandingPageComponent></LandingPageComponent>
 	)
 }
 
