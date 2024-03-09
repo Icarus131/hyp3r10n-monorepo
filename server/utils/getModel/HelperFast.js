@@ -34,7 +34,6 @@ const sum = async (req, res) => {
 const predict = async (req, res) => {
   try {
     const data = {
-      data: "0,115307855,5,0,0,0,0,0,0,0,0.04336218,32400000,812396,115000000,812396,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0,1812348,56700000,Benign",
       protocol: 0,
       flow_duration: 115307855,
       tot_fwd_pkts: 5,
@@ -72,7 +71,7 @@ const predict = async (req, res) => {
       .post("http://localhost:8080/predict", data)
       .then((response) => {
         console.log("Response:", response.data);
-        res.status(200).send({Result : response.data});
+        res.status(200).json({Result : response.data});
       })
       .catch((error) => {
         console.error("Error:", error);

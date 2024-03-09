@@ -20,7 +20,6 @@ const io = new Server(server, {
 });
 const { Pool } = require("pg");
 
-// const openaiRoute = require("./routes/OpenAI");
 const fastapiRoute = require("./routes/FastAPI");
 
 const client = mqtt.connect(brokerUrl);
@@ -60,8 +59,6 @@ app.use((err, req, res, next) => {
 app.get("/", (req, res) => {
   res.status(200).send("Sup?");
 });
-
-// app.use("/openai", openaiRoute);
 
 app.use("/fastapi", fastapiRoute);
 

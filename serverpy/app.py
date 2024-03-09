@@ -7,7 +7,6 @@ app = FastAPI()
 
 
 class NewDataInput(BaseModel):
-    data: str
     protocol: int
     flow_duration: float
     tot_fwd_pkts: int
@@ -48,7 +47,6 @@ async def predict():
     model.load_model("gradient_boost_model.cbm")
 
     new_data_dict = {
-        "data": "0,115307855,5,0,0,0,0,0,0,0,0.04336218,32400000,812396,115000000,812396,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0,1812348,56700000,Benign",
         "protocol": 0,
         "flow_duration": 115307855,
         "tot_fwd_pkts": 5,
