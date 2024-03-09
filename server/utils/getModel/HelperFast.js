@@ -67,9 +67,14 @@ const predict = async (req, res) => {
       idle_mean: 56700000.0,
     };
 
+    const startTime = new Date();
     const response = await axios.post("http://localhost:8080/predict", data);
+    const endTime = new Date();
+
+    const latency = endTime - startTime;
+
     console.log("Response:", response.data);
-    res.status(200).json({ Result: response.data });
+    res.status(200).json({ Result: response.data, latency: latency }); 
   } catch (error) {
     console.error("Error:", error);
     res
