@@ -5,9 +5,16 @@ const cors = require("cors");
 require("dotenv").config();
 const http = require("http");
 const app = express();
+const { Server } = require("socket.io")
 const server = http.createServer(app);
 const socketIo = require("socket.io");
-const io = socketIo(server, { path: "/sockets" });
+// const io = socketIo(server, { path: "/sockets" });
+
+const io = new Server(server,{
+	cors: {
+		origin: "http://localhost:5173",
+	}
+})
 const { Pool } = require("pg");
 
 ////routes
@@ -42,7 +49,7 @@ io.on("connection", (socket) => {
     
     socket.on("chat message", (msg) => {
         console.log("Message: " + msg);
-        io.emit("chat message", msg);
+        // io.emit("chat message", msg);
   });
 });
 
@@ -94,3 +101,5 @@ io.on("connection", (socket) => {
 app.listen(8000, () => {
   console.log(`Server is running on port`);
 });
+
+server.listen(5000, () => {console.log("running on 5000")})
