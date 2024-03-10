@@ -36,6 +36,7 @@ client.on("connect", () => {
 client.on("message", (topic, message) => {
   const data = JSON.parse(message.toString());
   console.log(data)
+	io.emit("receieve_message", data)
   const {title, time} = data
   if (title == "PSH") {
     console.log(`Received message from Device ${topic}: ${message}`);
@@ -128,6 +129,6 @@ app.listen(8000, () => {
   console.log(`Server is running on port 8000`);
 });
 
-server.listen(6000, () => {
-  console.log("Socket running on port 5000");
+server.listen(7000, () => {
+  console.log("Socket running on port 7000");
 });
