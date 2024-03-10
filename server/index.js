@@ -13,6 +13,7 @@ const mqtt = require("mqtt");
 const brokerUrl = "mqtt://broker.hivemq.com";
 const deviceTopics = ["D1", "D2", "D3", "D4", "D5"]; // Topics for each device
 
+
 const io = new Server(server, {
   cors: {
     origin: "http://localhost:5173",
@@ -44,6 +45,8 @@ client.on("message", (topic, message) => {
     client.publish(`${topic}_RECV`, JSON.stringify(outMessage) , () => {
       console.log(`ACK sent to Device ${topic}_RECV`);
     });
+  }else if(title == 'LOG'){
+    // LEHAR DO
   }
 });
 
