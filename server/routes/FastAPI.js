@@ -5,6 +5,6 @@ const { testFastReq, sum, predict } = require("../utils//getModel/HelperFast");
 
 router.get('/testFastReq', testFastReq);
 router.get('/sum', sum);
-router.get('/predict', predict);
+router.post('/predict', predict);
 
 module.exports = router;

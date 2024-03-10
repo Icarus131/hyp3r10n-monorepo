@@ -1,4 +1,18 @@
 const axios = require("axios");
+const express = require("express");
+const http = require("http");
+
+const { Server } = require("socket.io");
+const app = express();
+const server = http.createServer(app);
+const blackList = new Set();
+let blackListSize = blackList.size;
+
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:5173",
+  },
+});
 
 const testFastReq = async (req, res) => {
   try {
@@ -33,48 +47,28 @@ const sum = async (req, res) => {
 
 const predict = async (req, res) => {
   try {
-    const data = {
-      protocol: 0,
-      flow_duration: 115307855,
-      tot_fwd_pkts: 5,
-      tot_bwd_pkts: 0,
-      totlen_fwd_pkts: 0.0,
-      totlen_bwd_pkts: 0.0,
-      fwd_pkt_len_mean: 0.0,
-      fwd_pkt_len_std: 0.0,
-      bwd_pkt_len_mean: 0.0,
-      flow_byts_s: 0.04336218,
-      flow_pkts_s: 32400000.0,
-      flow_iat_std: 812396.0,
-      flow_iat_min: 115000000.0,
-      fwd_iat_tot: 812396.0,
-      fwd_iat_min: 0.0,
-      bwd_iat_tot: 0.0,
-      bwd_iat_min: 0.0,
-      fwd_psh_flags: 0,
-      fwd_urg_flags: 0,
-      bwd_pkts_s: 0.0,
-      fin_flag_cnt: 0,
-      rst_flag_cnt: 0,
-      psh_flag_cnt: 0,
-      ack_flag_cnt: 0,
-      urg_flag_cnt: 0,
-      down_up_ratio: -1.0,
-      init_fwd_win_byts: -1,
-      init_bwd_win_byts: 0,
-      fwd_seg_size_min: 1812348,
-      active_mean: 56700000.0,
-      idle_mean: 56700000.0,
-    };
+    const data = req.body;
+    const ipAddress = data.IP.toLowerCase(); 
+    if (blackList.has(ipAddress)) {
+      return res.status(418).json({ Result: "You dirty attacker 👀" });
+    }
 
     const startTime = new Date();
     const response = await axios.post("http://localhost:8080/predict", data);
     const endTime = new Date();
-
     const latency = endTime - startTime;
 
+    const predictionResult = response.data.Result; 
+    if (predictionResult !== "Benign") {
+      blackList.add(ipAddress.toLowerCase()); 
+      io.emit("blocked_message", ipAddress); 
+      return res
+        .status(418)
+        .json({ Result: "You have been added to watchlist 👀" });
+    }
+
     console.log("Response:", response.data);
-    res.status(200).json({ Result: response.data, latency: latency }); 
+    res.status(200).json({ Result: response.data, latency: latency });
   } catch (error) {
     console.error("Error:", error);
     res

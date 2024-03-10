@@ -8,11 +8,22 @@ const app = express();
 const { Server } = require("socket.io");
 const server = http.createServer(app);
 const socketIo = require("socket.io");
+
 // const io = socketIo(server, { path: "/sockets" });
 const mqtt = require("mqtt");
 const brokerUrl = "mqtt://broker.hivemq.com";
 const deviceTopics = ["D1", "D2", "D3", "D4", "D5"]; // Topics for each device
+const axios = require('axios');
 
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: "testaccout33@gmail.com",
+    pass: "rexmriznhrrkegcc",
+  },
+});
 
 const io = new Server(server, {
   cors: {
@@ -29,27 +40,35 @@ client.on("connect", () => {
   console.log("Listener connected to MQTT broker");
   deviceTopics.forEach((topic) => {
     client.subscribe(topic); // Subscribe to topics for all devices
-    console.log(topic, "DONE")
+    console.log(topic, "DONE");
   });
 });
 
 client.on("message", (topic, message) => {
-  const data = JSON.parse(message.toString());
-  console.log(data)
+    const data = JSON.parse(message.toString());
+    console.log(data);
 	io.emit("receieve_message", data)
-  const {title, time} = data
-  if (title == "PSH") {
-    console.log(`Received message from Device ${topic}: ${message}`);
-    // Send ACK back to device
-    const outMessage = {title: "ACK" , time: Date.now()}
-    client.publish(`${topic}_RECV`, JSON.stringify(outMessage) , () => {
-      console.log(`ACK sent to Device ${topic}_RECV`);
-    });
-  }else if(title == 'LOG'){
-    // LEHAR DO
-  }
-});
-
+    const { title, time } = data;
+    if (title == "PSH") {
+      console.log(`Received message from Device ${topic}: ${message}`);
+      // Send ACK back to device
+      const outMessage = { title: "ACK", time: Date.now() };
+      client.publish(`${topic}_RECV`, JSON.stringify(outMessage), () => {
+        console.log(`ACK sent to Device ${topic}_RECV`);
+      });
+    } else if (title == "LOG") {
+      console.log("got log");
+      axios
+        .post("http://localhost:8000/fastapi/predict", data)
+        .then((response) => {
+          console.log("Response from /fastapi/predict:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error sending data to /fastapi/predict:", error);
+        });
+    }
+  });
+  
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -63,6 +82,31 @@ app.use((err, req, res, next) => {
 app.get("/", (req, res) => {
   res.status(200).send("Sup?");
 });
+
+app.post("/mail", (req, res) => {
+  const mailOptions = {
+    to: "acc088930@gmail.com", //The Embrione Mail comes here.
+    subject: `Suspicious activity on tagged account`,
+    text: JSON.stringify(req.body),
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(200).json({
+        message: JSON.stringify(error.message),
+      });
+    } else {
+      // console.log("Email sent: " + info.response + Date.now());
+      console.log("Mail Sent Successfully!");
+      res.status(200).json({
+        message: "Success! Message Sent! ",
+      });
+    }
+    // res.json({name: 'This is the backendddd'})
+  });
+});
+
 
 app.use("/fastapi", fastapiRoute);
 

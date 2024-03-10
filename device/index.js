@@ -75,8 +75,10 @@ client.on("message", (topic, message) => {
       if (stderr) {
         console.error(`Command stderr for Device ${DEVICE_TOPIC}: ${stderr}`);
         client.publish(DEVICE_TOPIC, JSON.stringify({}));
-        readCsvFile(FILE_PATH)
-        publishMessagesWithDelay(1500)
+        readCsvFile(FILE_PATH).then(() => {
+            publishMessagesWithDelay(1500, jsonDataArray)
+        })
+        
         return;
     }
     
@@ -102,12 +104,12 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function publishMessagesWithDelay(delay) {
-    for (let i = 0; i < jsonDataArray.length; i++) {
+async function publishMessagesWithDelay(delay, data) {
+    for (let i = 0; i < data.length; i++) {
         // Get IP address
         let ip = getIpAddress() || "";
         // Construct message
-        const outMessage = { ...jsonDataArray[i], title: "LOG", IP: ip };
+        const outMessage = { ...data[i], title: "LOG", IP: ip };
         delete outMessage['label']
         // Publish message to MQTT topic
         client.publish(DEVICE_TOPIC, JSON.stringify(outMessage));
