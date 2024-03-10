@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Roboto:wght@100;500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap')
 
 @tailwind base;
 @tailwind components;
@@ -94,8 +93,8 @@ body{
 }
 
 .chart{
-	width: 600px !important;
-	height: 300px !important;
+	width: 200px !important;
+	height: 100px !important;
 }
 
 ::-webkit-scrollbar {
@@ -106,6 +105,9 @@ body{
     background: transparent;
 }
 
-.ibm{
-	font-family: 'IBM Plex Mono', monospace;
+@media (min-width: 1024px){
+	.chart{
+		width: 600px !important;
+		height: 300px !important;
+	}
 }

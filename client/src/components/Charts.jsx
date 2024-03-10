@@ -52,7 +52,7 @@ export const data = {
 
 function Charts() {
 	return (
-		<div className='flex flex-col bg-slate-900 rounded-lg mx-2 h-[95%]'>
+		<div className='sm:flex hidden flex-row sm:flex-col gap-4 bg-[rgba(17,24,39,0.9)] rounded-lg mx-2 h-[95%]'>
 			<Bar options={options} data={data} className='chart h-3/5'/>
 			<Bar options={options} data={data} className='chart h-3/5'/>
 		</div>
