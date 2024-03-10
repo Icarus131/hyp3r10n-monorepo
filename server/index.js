@@ -21,7 +21,6 @@ const io = new Server(server, {
 });
 const { Pool } = require("pg");
 
-// const openaiRoute = require("./routes/OpenAI");
 const fastapiRoute = require("./routes/FastAPI");
 
 const client = mqtt.connect(brokerUrl);
@@ -63,8 +62,6 @@ app.use((err, req, res, next) => {
 app.get("/", (req, res) => {
   res.status(200).send("Sup?");
 });
-
-// app.use("/openai", openaiRoute);
 
 app.use("/fastapi", fastapiRoute);
 
@@ -132,5 +129,5 @@ app.listen(8000, () => {
 });
 
 server.listen(6000, () => {
-  console.log("running on 5000");
+  console.log("Socket running on port 5000");
 });

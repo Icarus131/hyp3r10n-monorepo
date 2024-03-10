@@ -34,7 +34,6 @@ const sum = async (req, res) => {
 const predict = async (req, res) => {
   try {
     const data = {
-      data: "0,115307855,5,0,0,0,0,0,0,0,0.04336218,32400000,812396,115000000,812396,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0,1812348,56700000,Benign",
       protocol: 0,
       flow_duration: 115307855,
       tot_fwd_pkts: 5,
@@ -68,16 +67,20 @@ const predict = async (req, res) => {
       idle_mean: 56700000.0,
     };
 
-    axios
-      .post("http://localhost:8080/predict", data)
-      .then((response) => {
-        console.log("Response:", response.data);
-        res.status(200).send({Result : response.data});
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  } catch (err) {}
+    const startTime = new Date();
+    const response = await axios.post("http://localhost:8080/predict", data);
+    const endTime = new Date();
+
+    const latency = endTime - startTime;
+
+    console.log("Response:", response.data);
+    res.status(200).json({ Result: response.data, latency: latency }); 
+  } catch (error) {
+    console.error("Error:", error);
+    res
+      .status(500)
+      .json({ error: "Internal Server Error", moreInfo: error.message });
+  }
 };
 
 module.exports = { testFastReq, sum, predict };
